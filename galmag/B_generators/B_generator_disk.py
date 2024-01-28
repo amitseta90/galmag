@@ -58,12 +58,12 @@ class B_generator_disk(B_generator):
         Choice between 'cartesian', 'spherical' and 'cylindrical' *uniform*
         coordinate grids. Default: 'cartesian'
     dtype : numpy.dtype, optional
-        Data type used. Default: np.dtype(np.float)
+        Data type used. Default: np.dtype(float)
 
     """
     def __init__(self, grid=None, box=None, resolution=None,
                  grid_type='cartesian', default_parameters={},
-                 dtype=np.float):
+                 dtype=float):
 
         super(B_generator_disk, self).__init__(
                                         grid=grid,
@@ -122,7 +122,7 @@ class B_generator_disk(B_generator):
         i=-1 # For the case of no-reversals
 
         for i, r_reversal in enumerate(reversals):
-            r_reversal = np.float64(r_reversal)
+            r_reversal = float(r_reversal)
             for j in range(self.modes_count):
                 tmp_parameters['disk_modes_normalization'] = \
                                                 np.zeros(self.modes_count)
