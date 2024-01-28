@@ -572,7 +572,7 @@ class xi_lookup_table(object):
                 try:
 
                     # Stores every root found
-                    results.append(np.float64(findroot(f, guess)))
+                    results.append(float(findroot(f, guess)))
                 except ValueError:
                     # Ignores failures in finding the root
                     pass
