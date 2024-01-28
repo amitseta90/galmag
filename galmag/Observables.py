@@ -18,10 +18,10 @@
 """
 Contains a class for computing a selection of observables
 """
-from B_generators.B_generator import B_generator
-import electron_profiles as prof
+from galmag.B_generators.B_generator import B_generator
+import galmag.electron_profiles as prof
 import numpy as np
-import util
+import galmag.util
 
 class Observables(B_generator):
     """
