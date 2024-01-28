@@ -28,7 +28,7 @@ from .util import curl_spherical, simpson
 from joblib import Parallel, delayed
 
 def Galerkin_expansion_coefficients(parameters, return_matrix=False,
-                                    dtype=np.float64):
+                                    dtype=float):
     r"""
     Calculates the Galerkin expansion coefficients.
 
