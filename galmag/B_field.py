@@ -49,7 +49,7 @@ class B_field_component(object):
     """
     def __init__(self, grid, x=None, y=None, z=None, r_spherical=None,
                  r_cylindrical=None, theta=None, phi=None, copy=True,
-                 dtype=np.dtype(np.float), generator=None, parameters={}):
+                 dtype=np.dtype(float), generator=None, parameters={}):
 
         assert(isinstance(grid, Grid))
         self.grid = grid
@@ -277,15 +277,15 @@ class B_field(object):
         Choice between 'cartesian', 'spherical' and 'cylindrical' *uniform*
         coordinate grids. Default: 'cartesian'
     dtype : numpy.dtype, optional
-        Data type used. Default: np.dtype(np.float)
+        Data type used. Default: np.dtype(float)
 
     """
     def __init__(self, box, resolution, grid_type='cartesian',
-                 dtype=np.float, **kwargs):
+                 dtype=float, **kwargs):
 
         self.dtype = dtype
         self.box = np.empty((3, 2), dtype=self.dtype)
-        self.resolution = np.empty((3,), dtype=np.int)
+        self.resolution = np.empty((3,), dtype=int)
         # Uses numpy upcasting of scalars and dtype conversion
         self.grid_type = grid_type
         self.box[:] = box
