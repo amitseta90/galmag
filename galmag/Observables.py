@@ -54,7 +54,7 @@ class Observables(B_generator):
         Needs to be adjusted
     """
     def __init__(self, B_field, default_parameters={},
-                 dtype=np.float64, direction=None, **kwargs):
+                 dtype=float, direction=None, **kwargs):
 
 
         if B_field.grid.grid_type != 'cartesian':
