@@ -30,7 +30,7 @@ class B_generator(object):
     """
     def __init__(self, grid=None, box=None, resolution=None,
                  grid_type='cartesian', default_parameters={},
-                 dtype=np.float):
+                 dtype=float):
 
         self.dtype = dtype
         self._init_default_parameters(default_parameters)
@@ -43,7 +43,7 @@ class B_generator(object):
 
         elif box is not None and resolution is not None:
             self.box = np.empty((3, 2), dtype=self.dtype)
-            self.resolution = np.empty((3,), dtype=np.int)
+            self.resolution = np.empty((3,), dtype=int)
 
             # use numpy upcasting of scalars and dtype conversion
             self.grid_type = grid_type
