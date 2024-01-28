@@ -42,12 +42,12 @@ class B_generator_halo(B_generator):
         Choice between 'cartesian', 'spherical' and 'cylindrical' *uniform*
         coordinate grids. Default: 'cartesian'
     dtype : numpy.dtype, optional
-        Data type used. Default: np.dtype(np.float)
+        Data type used. Default: np.dtype(float)
 
     """
     def __init__(self, grid=None, box=None, resolution=None,
                  grid_type='cartesian', default_parameters={},
-                 dtype=np.float):
+                 dtype=float):
 
         super(B_generator_halo, self).__init__(
                                         grid=grid,
